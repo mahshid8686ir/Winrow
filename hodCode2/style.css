@@ -1,0 +1,26 @@
+/*
+    Theme Name: HodCode2
+    Theme URI: https://example.com/my-custom-theme/
+    Author: Your Name
+    Author URI: https://example.com/
+    Description: A custom WordPress theme.
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: custom, responsive, blog
+    Text Domain: my-custom-theme
+*/
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('fonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+       url('fonts/Vazirmatn[wght].woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+*{
+  font-family: Vazirmatn;
+}
