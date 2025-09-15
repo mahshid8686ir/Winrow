@@ -1,0 +1,85 @@
+/*
+Theme Name: Zink
+Text Domain: zink
+Version: 0.1.0
+Requires at least: 6.5
+Requires PHP: 7.4
+Author: Mahshid Maghsoodi
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('./assets/fonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+       url('./assets/fonts/Vazirmatn[wght].woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+*{
+  font-family: Vazirmatn;
+}
+
+/* کوچک و مؤثر: transform-origin و scaleY helpers */
+.t-scale-0 { transform: scaleY(0); }
+.t-scale-1 { transform: scaleY(1); }
+.t-scale-transition { transition: transform 700ms cubic-bezier(.2,.9,.2,1); transform-origin: top; }
+
+/* دایره (pop) */
+.t-scale-0-c { transform: scale(0); transition: transform 450ms cubic-bezier(.2,.9,.2,1); }
+.t-scale-1-c { transform: scale(1); }
+
+/* اطمینان از transition برای متن اگر خواستی */
+.timeline-text { will-change: transform, opacity; }
+
+#supporters-wrapper {
+  perspective: 1000px;
+}
+
+.supporter-card {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  filter: blur(6px);
+  z-index: 1;
+}
+
+.supporter-card.center {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  filter: blur(0);
+  z-index: 50;
+}
+
+.supporter-card.top {
+  transform: translate(-50%, -150%) scale(0.8);
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 30;
+}
+
+.supporter-card.bottom {
+  transform: translate(-50%, 50%) scale(0.8);
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 30;
+}
+
+.supporter-card.left {
+  transform: translate(-150%, -50%) scale(0.8);
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 30;
+}
+
+.supporter-card.right {
+  transform: translate(50%, -50%) scale(0.8);
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 30;
+}
